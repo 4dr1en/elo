@@ -1,0 +1,112 @@
+body{
+    max-width: 100vw;
+    overflow-x: hidden;
+    min-height: 101vh;
+}
+
+/*display cat img*/
+img.catImg{
+    max-height: 60vh;
+}
+
+
+/*opt (pick a cat)*/
+.choiceImg{
+    transition-property: transform, opacity, border-radius;
+    transition-delay: 0.1s;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+.choiceImg:hover{
+    transform: rotate(8deg) scale(1.3);
+    border-radius: 50px;
+    overflow-x: hidden;
+}
+.choiceImg img{
+    position: relative;
+}
+.choiceCard:hover{
+    z-index: 2;
+}
+
+.win1{
+    transition-delay: 0s;
+    transition-duration: 1.1s;
+    transition-timing-function: ease-in;
+    box-shadow: 0 0 15px rgb(79, 109, 33);
+    transform: translateY(-70vh) translateX(20vw) rotate(8deg) !important;
+    opacity: 20%;
+    border-radius: 50px;
+}
+.win2{
+    transition-delay: 0s;
+    transition-duration: 0.8s;
+    transition-timing-function: ease-in;
+    box-shadow: 0 0 15px rgb(79, 109, 33);
+    transform: translateY(-70vh) translateX(-20vw) rotate(8deg) !important;
+    opacity: 20%;
+    border-radius: 50px;
+}
+.loose{
+    transition-delay: 0s;
+    transition-duration: 0.8s;
+    transition-timing-function: ease-in;
+    box-shadow: 0 0 15px rgb(105, 24, 24) ;
+    transform: translateY(70vh) rotate(8deg) !important;
+    opacity: 5%;
+    border-radius: 50px;
+}
+/*forms cat*/
+.gluedLeft{
+    padding-left: 0 !important;
+}
+.gluedLeft>select{
+    border-radius: 0 5px 5px 0;
+    border-left: 0;
+}
+#gluedRight{
+    padding-right: 0 !important;
+}
+.gluedRight>input{
+    border-radius: 5px 0 0 5px;
+}
+
+/*topCatView*/
+.thumbnail{
+    max-height: 350px;
+    max-width: 100%;
+}
+
+.cat{
+    margin-bottom: -50px;
+}
+.cat:nth-child(even){
+    display: flex;
+    justify-content: flex-end;
+}
+.cat:nth-child(even) .catImg{
+    order: 4;
+}
+.ranking{
+    font-size: 6em;
+}
+
+th .ranking{
+    font-size: 1.8rem;
+}
+.info{
+    padding: 0;
+    font-size: 1.1em;
+    list-style-type: none;
+}
+
+@media screen and (max-width: 576px) {
+    .catImg{
+        order: 4;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .cat {
+        margin-bottom: 10px;
+    }
+}
